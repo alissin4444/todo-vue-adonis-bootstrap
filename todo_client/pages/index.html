@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO APP</title>
+	<!-- CDN VUEJS -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+		<div id="App"></div>
+
+<script type="text/javascript">
+	const app = new Vue({
+		el: "#App",
+		data: {
+			token: ""
+		},
+		mounted() {
+			if(localStorage.token) {
+				window.location.href = "http://127.0.0.1:8080/pages/inicio";
+			} else {
+				window.location.href = "http://127.0.0.1:8080";
+			}
+		}
+	});
+</script>
+
+</body>
+</html>
